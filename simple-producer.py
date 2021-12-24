@@ -5,10 +5,8 @@ from boto import kinesis
 import time
 import sys
 
-# id=sys.argv[0]
-# key=sys.argv[1]
-id = 'AKIARLZ6R52JFKELZTQN'
-key = 'LI5sQlJK/F+VGA+zyZJ4QAgA7vZSzviWDpLpyph4'
+id=sys.argv[0]
+key=sys.argv[1]
 stream_name = 'ddp-job-store-cdc-pipeline-stream'
 auth = {"aws_access_key_id": id, "aws_secret_access_key": key}
 connection = kinesis.connect_to_region('ap-northeast-1', **auth)
